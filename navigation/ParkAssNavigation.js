@@ -10,7 +10,10 @@ import HomeScreen from '../screens/HomeScreen';
 import AuthScreen from '../screens/AuthScreen';
 import StartUpScreen from '../screens/StartUpScreen';
 import UserReports from '../screens/UserReportScreen';
+import FullMap from '../screens/FullMapScreen';
 import Colors from '../constants/Colors';
+import MapScreen from '../screens/MapScreen';
+import ImagePicker from '../components/ImagePicker';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -64,7 +67,7 @@ export const ParkAssDrawer = () => {
         );
       }}
     >
-      <Drawer.Screen name="ParkAss" component={ParkAssNavigation} />
+      <Drawer.Screen name="Home" component={ParkAssNavigation} />
       <Drawer.Screen name="Reports" component={ReportStackNavigation} />
     </Drawer.Navigator>
   )
@@ -76,6 +79,9 @@ export const ParkAssNavigation = () => {
         {/* <Stack.Screen name="Startup" component={StartUpScreen} options={{ title: 'ParkAss', headerLeft: null }}/> */}
         {/* <Stack.Screen name="Auth" component={AuthNavigator} options={{ title: 'Authenticate', headerLeft: null }}/> */}
         <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'ParkAss', headerLeft: null }}/>
+        <Stack.Screen name="Camera" component={ImagePicker} options={{ title: 'Camera', headerLeft: null }}/>
+        <Stack.Screen name="Map" component={MapScreen} options={{ title: 'Map', headerLeft: null }}/>
+        <Stack.Screen name="FullMap" component={FullMap} options={{ title: 'Map' }}/>
       </Stack.Navigator>
   );
 }

@@ -8,10 +8,10 @@ const HomeScreen = (props) => {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>
-      {/* <Button style={styles.button} title="Log Out" onPress={() => {
-        dispatch(authActions.logout());
-        props.navigation.navigate('Auth');
-      }}/> */}
+      <Button style={styles.button} title="Camera" onPress={() => {
+        // dispatch(authActions.logout());
+        props.navigation.navigate('Camera');
+      }}/>
     </View>
   );
 }
