@@ -5,6 +5,8 @@ import Colors from '../constants/Colors';
 import MapPreview from '../components/MapPreview';
 
 const MapScreen = props => {
+  console.log("Map screen", props.route.params);
+
   const [isFetching, setIsFetching] = useState(false);
   const [pickedLocation, setPickedLocation] = useState();
 
@@ -31,7 +33,6 @@ const MapScreen = props => {
       const location = await Location.getCurrentPositionAsync({
         timeout: 5000
       });
-      console.log(location);
       setPickedLocation({
         lat: location.coords.latitude,
         lng: location.coords.longitude

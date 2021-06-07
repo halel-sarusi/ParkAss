@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import {createDrawerNavigator, DrawerItemList} from '@react-navigation/drawer';
-import { Platform, SafeAreaView, Button, View } from 'react-native';
+import { Platform, SafeAreaView, Button, View, TouchableOpacity } from 'react-native';
 import { useDispatch } from 'react-redux';
 import * as authActions from '../store/action/auth';
 
@@ -10,7 +10,7 @@ import HomeScreen from '../screens/HomeScreen';
 import AuthScreen from '../screens/AuthScreen';
 import StartUpScreen from '../screens/StartUpScreen';
 import UserReports from '../screens/UserReportScreen';
-import FullMap from '../screens/FullMapScreen';
+import FullMap, {fullMapOption as fullMapOption} from '../screens/FullMapScreen';
 import Colors from '../constants/Colors';
 import MapScreen from '../screens/MapScreen';
 import ImagePicker from '../components/ImagePicker';
@@ -81,7 +81,7 @@ export const ParkAssNavigation = () => {
         <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'ParkAss', headerLeft: null }}/>
         <Stack.Screen name="Camera" component={ImagePicker} options={{ title: 'Camera', headerLeft: null }}/>
         <Stack.Screen name="Map" component={MapScreen} options={{ title: 'Map', headerLeft: null }}/>
-        <Stack.Screen name="FullMap" component={FullMap} options={{ title: 'Map' }}/>
+        <Stack.Screen name="FullMap" component={FullMap} options={fullMapOption} />
       </Stack.Navigator>
   );
 }
