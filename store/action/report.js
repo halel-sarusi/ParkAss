@@ -11,16 +11,16 @@ import {useSelector, useStore} from 'react-redux';
 export const addImage = (imageUrl) =>{
     // const store = useStore;
     // console.log('store',store.getState  ); 
-    someAction();
+    // someAction();
     return { type: ADD_IMAGE, image:imageUrl };
 }
 
-export function someAction() {
-    return (dispatch, getState) => {
-      const {items} = getState;
-      console.log(items);
-    }
-} 
+// export function someAction() {
+//     return (dispatch, getState) => {
+//       const {items} = getState;
+//       console.log(items);
+//     }
+// } 
 
 export const addLocation = (location) => {
     return async dispatch => {
