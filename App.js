@@ -15,6 +15,7 @@ const rootReducer = combineReducers({
 });
 
 const store = createStore(rootReducer, applyMiddleware(ReduxThunk));
+// console.log(store.getState().report);
 
 export default function App() {
   return (

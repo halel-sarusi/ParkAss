@@ -13,6 +13,7 @@ import UserReports from '../screens/UserReportScreen';
 import FullMap, {fullMapOption as fullMapOption} from '../screens/FullMapScreen';
 import Colors from '../constants/Colors';
 import MapScreen from '../screens/MapScreen';
+import DetailsScreen from '../screens/DetailsScreen';
 import ImagePicker from '../components/ImagePicker';
 
 const Stack = createStackNavigator();
@@ -81,6 +82,7 @@ export const ParkAssNavigation = () => {
         <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'ParkAss', headerLeft: null }}/>
         <Stack.Screen name="Camera" component={ImagePicker} options={{ title: 'Camera', headerLeft: null }}/>
         <Stack.Screen name="Map" component={MapScreen} options={{ title: 'Map', headerLeft: null }}/>
+        <Stack.Screen name="Details" component={DetailsScreen} options={{ title: 'Details', headerLeft: null }}/>
         <Stack.Screen name="FullMap" component={FullMap} options={fullMapOption} />
       </Stack.Navigator>
   );

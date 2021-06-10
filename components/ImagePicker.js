@@ -4,6 +4,8 @@ import * as ImagePicker from 'expo-image-picker';
 import { useDispatch } from 'react-redux';
 import * as Permissions from 'expo-permissions';
 import * as reportActions from '../store/action/report';
+import {useSelector} from 'react-redux';
+
 
 import Colors from '../constants/Colors';
 
@@ -37,6 +39,7 @@ const ImgPicker = props => {
 
     setPickedImage(image.uri);
     dispatch(reportActions.addImage(image.uri));
+    props.navigation.setParams({ imageUrl: image.uri });
     props.navigation.navigate('Map');
   };
 
